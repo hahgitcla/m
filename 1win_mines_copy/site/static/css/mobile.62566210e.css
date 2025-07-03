@@ -2969,17 +2969,22 @@ body {
   }
 }
 #header.game-related[data-v-04722cbe] {
-  position: fixed;
+  position: fixed !important;
+  bottom: 0 !important; /* Розташовуємо в самому низу екрана */
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
   height: var(--layout-bottom-header-height);
+  background-color: var(--main-background-color) !important;
   border-bottom-width: 0;
-  padding-left: 0;
-  padding-left: var(--safe-area-inset-left);
-  padding-right: 3px;
-  padding-right: calc(3px + var(--safe-area-inset-right));
-  top: auto;
-  bottom: 0;
-  bottom: var(--safe-area-inset-bottom, 0);
+  padding-left: var(--safe-area-inset-left, 0);
+  padding-right: calc(3px + var(--safe-area-inset-right, 0));
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box !important;
+  z-index: 1000 !important;
 }
+
 #header.game-related .control-item[data-v-04722cbe],
 #header.game-related .deposit-button[data-v-04722cbe] {
   height: 24px;
